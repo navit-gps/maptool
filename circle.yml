@@ -29,8 +29,7 @@ test:
     - ./navit/bin/navit/maptool/maptool -P  -6 -s8 -e8 -i ~/${CIRCLE_BRANCH}-latest.osm.pbf $CIRCLE_ARTIFACTS/${CIRCLE_BRANCH}.bin
     - ./navit/bin/navit/maptool/maptool -P  -6 -s9 -e9 -i ~/${CIRCLE_BRANCH}-latest.osm.pbf $CIRCLE_ARTIFACTS/${CIRCLE_BRANCH}.bin
     - ./navit/bin/navit/maptool/maptool -P  -6 -s10 -e10 -i ~/${CIRCLE_BRANCH}-latest.osm.pbf $CIRCLE_ARTIFACTS/${CIRCLE_BRANCH}.bin
-    - ./navit/bin/navit/maptool/maptool -P  -6 -s11 -e11 -i ~/${CIRCLE_BRANCH}-latest.osm.pbf $CIRCLE_ARTIFACTS/${CIRCLE_BRANCH}.bin
-    - ./navit/bin/navit/maptool/maptool -P  -6 -s12 -i ~/${CIRCLE_BRANCH}-latest.osm.pbf $CIRCLE_ARTIFACTS/${CIRCLE_BRANCH}.bin
+    - ./navit/bin/navit/maptool/maptool -P  -6 -s11 -i ~/${CIRCLE_BRANCH}-latest.osm.pbf $CIRCLE_ARTIFACTS/${CIRCLE_BRANCH}.bin
 general:
   artifacts:
     - "~/assets/binmaps/"

@@ -1,35 +1,33 @@
 machine:
   environment:
     MAPCODE: 150302
+    MAP: ${CIRCLE_BRANCH}
 dependencies:
   pre:
     - mkdir -p ~/assets/binmaps/
     - find  ~/assets/
     - sudo apt-get update
-    - wget -c -O  ~/${CIRCLE_BRANCH}-latest.osm.pbf http://download.geofabrik.de/${CIRCLE_BRANCH}-latest.osm.pbf
+    - wget -c -O  ~/${MAP}-latest.osm.pbf http://download.geofabrik.de/${MAP}-latest.osm.pbf
     - sudo apt-get install cmake 
-    - sudo apt-get install libpng12-dev 
-    - sudo apt-get install libgtk2.0-dev 
-    - sudo apt-get install librsvg2-bin 
     - sudo apt-get install g++
     - bash build.sh
   cache_directories:
     - "~/assets/"
 test:
   post:
-    - ./navit/bin/navit/maptool/maptool -P  -6 -s1 -e1 -i ~/${CIRCLE_BRANCH}-latest.osm.pbf $CIRCLE_ARTIFACTS/${CIRCLE_BRANCH}.bin:
+    - ./navit/bin/navit/maptool/maptool -P  -6 -s1 -e1 -i ~/${MAP}-latest.osm.pbf $CIRCLE_ARTIFACTS/${MAP}.bin:
         timeout: 7200
-    - ./navit/bin/navit/maptool/maptool -P  -6 -s2 -e2 -i ~/${CIRCLE_BRANCH}-latest.osm.pbf $CIRCLE_ARTIFACTS/${CIRCLE_BRANCH}.bin
-    - ./navit/bin/navit/maptool/maptool -P  -6 -s3 -e3 -i ~/${CIRCLE_BRANCH}-latest.osm.pbf $CIRCLE_ARTIFACTS/${CIRCLE_BRANCH}.bin
-    - ./navit/bin/navit/maptool/maptool -P  -6 -s4 -e4 -i ~/${CIRCLE_BRANCH}-latest.osm.pbf $CIRCLE_ARTIFACTS/${CIRCLE_BRANCH}.bin
-    - ./navit/bin/navit/maptool/maptool -P  -6 -s5 -e5 -i ~/${CIRCLE_BRANCH}-latest.osm.pbf $CIRCLE_ARTIFACTS/${CIRCLE_BRANCH}.bin
-    - ./navit/bin/navit/maptool/maptool -P  -6 -s6 -e6 -i ~/${CIRCLE_BRANCH}-latest.osm.pbf $CIRCLE_ARTIFACTS/${CIRCLE_BRANCH}.bin:
+    - ./navit/bin/navit/maptool/maptool -P  -6 -s2 -e2 -i ~/${MAP}-latest.osm.pbf $CIRCLE_ARTIFACTS/${MAP}.bin
+    - ./navit/bin/navit/maptool/maptool -P  -6 -s3 -e3 -i ~/${MAP}-latest.osm.pbf $CIRCLE_ARTIFACTS/${MAP}.bin
+    - ./navit/bin/navit/maptool/maptool -P  -6 -s4 -e4 -i ~/${MAP}-latest.osm.pbf $CIRCLE_ARTIFACTS/${MAP}.bin
+    - ./navit/bin/navit/maptool/maptool -P  -6 -s5 -e5 -i ~/${MAP}-latest.osm.pbf $CIRCLE_ARTIFACTS/${MAP}.bin
+    - ./navit/bin/navit/maptool/maptool -P  -6 -s6 -e6 -i ~/${MAP}-latest.osm.pbf $CIRCLE_ARTIFACTS/${MAP}.bin:
        timeout: 7200
-    - ./navit/bin/navit/maptool/maptool -P  -6 -s7 -e7 -i ~/${CIRCLE_BRANCH}-latest.osm.pbf $CIRCLE_ARTIFACTS/${CIRCLE_BRANCH}.bin
-    - ./navit/bin/navit/maptool/maptool -P  -6 -s8 -e8 -i ~/${CIRCLE_BRANCH}-latest.osm.pbf $CIRCLE_ARTIFACTS/${CIRCLE_BRANCH}.bin
-    - ./navit/bin/navit/maptool/maptool -P  -6 -s9 -e9 -i ~/${CIRCLE_BRANCH}-latest.osm.pbf $CIRCLE_ARTIFACTS/${CIRCLE_BRANCH}.bin
-    - ./navit/bin/navit/maptool/maptool -P  -6 -s10 -e10 -i ~/${CIRCLE_BRANCH}-latest.osm.pbf $CIRCLE_ARTIFACTS/${CIRCLE_BRANCH}.bin
-    - ./navit/bin/navit/maptool/maptool -P  -6 -s11 -i ~/${CIRCLE_BRANCH}-latest.osm.pbf $CIRCLE_ARTIFACTS/${CIRCLE_BRANCH}.bin
+    - ./navit/bin/navit/maptool/maptool -P  -6 -s7 -e7 -i ~/${MAP}-latest.osm.pbf $CIRCLE_ARTIFACTS/${MAP}.bin
+    - ./navit/bin/navit/maptool/maptool -P  -6 -s8 -e8 -i ~/${MAP}-latest.osm.pbf $CIRCLE_ARTIFACTS/${MAP}.bin
+    - ./navit/bin/navit/maptool/maptool -P  -6 -s9 -e9 -i ~/${MAP}-latest.osm.pbf $CIRCLE_ARTIFACTS/${MAP}.bin
+    - ./navit/bin/navit/maptool/maptool -P  -6 -s10 -e10 -i ~/${MAP}-latest.osm.pbf $CIRCLE_ARTIFACTS/${MAP}.bin
+    - ./navit/bin/navit/maptool/maptool -P  -6 -s11 -i ~/${MAP}-latest.osm.pbf $CIRCLE_ARTIFACTS/${MAP}.bin
 general:
   artifacts:
     - "~/assets/binmaps/"

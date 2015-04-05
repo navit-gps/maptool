@@ -1,4 +1,5 @@
 test:
   post:
     - bash rebuild_url_list.sh
+    - cat maps.md
 

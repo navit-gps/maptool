@@ -41,6 +41,8 @@ deployment:
       - echo "[$MAP]#${CIRCLE_BUILD_NUM}" >> maps.md
       - sort maps.md -o maps.md
       - git add maps.md
+      - git config --global user.email "circleci@navit-project.org"
+      - git config --global user.name "CircleCI"
       - git commit -m "Automated maps list update from ${CIRCLE_BRANCH}" maps.md
       - git push origin
 

@@ -8,5 +8,4 @@ deployment:
     commands:
       - git config --global user.email "circleci@navit-project.org"
       - git config --global user.name "CircleCI"
-      - git commit -m "Automated maps list update from ${CIRCLE_BRANCH}" maps.md
-      - git push origin ${CIRCLE_BRANCH}
+      - git diff --exit-code && git commit -m "Automated maps list update from ${CIRCLE_BRANCH}" maps.md && git push origin ${CIRCLE_BRANCH}

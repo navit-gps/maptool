@@ -1,36 +1,4 @@
-machine:
-  environment:
-    MAPCODE: 150302
-dependencies:
-  pre:
-    - mkdir -p ~/assets/binmaps/
-    - find  ~/assets/
-    - sudo apt-get update
-    - wget -c -O  ~/${CIRCLE_BRANCH}-latest.osm.pbf http://download.geofabrik.de/${CIRCLE_BRANCH}-latest.osm.pbf
-    - sudo apt-get install cmake 
-    - sudo apt-get install libpng12-dev 
-    - sudo apt-get install libgtk2.0-dev 
-    - sudo apt-get install librsvg2-bin 
-    - sudo apt-get install g++
-    - bash build.sh
-  cache_directories:
-    - "~/assets/"
 test:
   post:
-    - ./bin/navit/maptool/maptool -P  -6 -s1 -e1 -i ~/${CIRCLE_BRANCH}-latest.osm.pbf $CIRCLE_ARTIFACTS/${CIRCLE_BRANCH}.bin:
-        timeout: 7200
-    - ./bin/navit/maptool/maptool -P  -6 -s2 -e2 -i ~/${CIRCLE_BRANCH}-latest.osm.pbf $CIRCLE_ARTIFACTS/${CIRCLE_BRANCH}.bin
-    - ./bin/navit/maptool/maptool -P  -6 -s3 -e3 -i ~/${CIRCLE_BRANCH}-latest.osm.pbf $CIRCLE_ARTIFACTS/${CIRCLE_BRANCH}.bin
-    - ./bin/navit/maptool/maptool -P  -6 -s4 -e4 -i ~/${CIRCLE_BRANCH}-latest.osm.pbf $CIRCLE_ARTIFACTS/${CIRCLE_BRANCH}.bin
-    - ./bin/navit/maptool/maptool -P  -6 -s5 -e5 -i ~/${CIRCLE_BRANCH}-latest.osm.pbf $CIRCLE_ARTIFACTS/${CIRCLE_BRANCH}.bin
-    - ./bin/navit/maptool/maptool -P  -6 -s6 -e6 -i ~/${CIRCLE_BRANCH}-latest.osm.pbf $CIRCLE_ARTIFACTS/${CIRCLE_BRANCH}.bin:
-       timeout: 7200
-    - ./bin/navit/maptool/maptool -P  -6 -s7 -e7 -i ~/${CIRCLE_BRANCH}-latest.osm.pbf $CIRCLE_ARTIFACTS/${CIRCLE_BRANCH}.bin
-    - ./bin/navit/maptool/maptool -P  -6 -s8 -e8 -i ~/${CIRCLE_BRANCH}-latest.osm.pbf $CIRCLE_ARTIFACTS/${CIRCLE_BRANCH}.bin
-    - ./bin/navit/maptool/maptool -P  -6 -s9 -e9 -i ~/${CIRCLE_BRANCH}-latest.osm.pbf $CIRCLE_ARTIFACTS/${CIRCLE_BRANCH}.bin
-    - ./bin/navit/maptool/maptool -P  -6 -s10 -e10 -i ~/${CIRCLE_BRANCH}-latest.osm.pbf $CIRCLE_ARTIFACTS/${CIRCLE_BRANCH}.bin
-    - ./bin/navit/maptool/maptool -P  -6 -s11 -e11 -i ~/${CIRCLE_BRANCH}-latest.osm.pbf $CIRCLE_ARTIFACTS/${CIRCLE_BRANCH}.bin
-    - ./bin/navit/maptool/maptool -P  -6 -s12 -i ~/${CIRCLE_BRANCH}-latest.osm.pbf $CIRCLE_ARTIFACTS/${CIRCLE_BRANCH}.bin
-general:
-  artifacts:
-    - "~/assets/binmaps/"
+    - bash rebuild_url_list.sh
+

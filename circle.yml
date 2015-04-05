@@ -36,6 +36,7 @@ deployment:
     branch: europe-albania
     commands:
       - git checkout master
+      - touch maps.md
       - sed -i "/$MAP/d" maps.md
       - echo "[$MAP]#${CIRCLE_BUILD_NUM}" >> maps.md
       - sort maps.md -o maps.md

@@ -31,3 +31,14 @@ test:
 general:
   artifacts:
     - "~/assets/binmaps/"
+deployment:
+  map_merge:
+    branch: ${CIRCLE_BRANCH}
+    commands:
+      - git checkout master
+      - sed -i "/$MAP/d" maps.md
+      - echo "[$MAP]#${CIRCLE_BUILD_NUM}" >> maps.md
+      - sort maps.md -o maps.md
+      - git commit -m "Automated maps list update from ${CIRCLE_BRANCH}" maps.md
+      - git push origin
+

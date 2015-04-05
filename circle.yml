@@ -2,4 +2,11 @@ test:
   post:
     - bash rebuild_url_list.sh
     - cat maps.md
-
+deployment:
+  deploy_master:
+    branch: master
+    commands:
+      - git config --global user.email "circleci@navit-project.org"
+      - git config --global user.name "CircleCI"
+      - git commit -m "Automated maps list update from ${CIRCLE_BRANCH}" maps.md
+      - git push origin ${CIRCLE_BRANCH}

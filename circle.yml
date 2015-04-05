@@ -32,8 +32,8 @@ general:
   artifacts:
     - "~/assets/binmaps/"
 deployment:
-  map_merge:
-    branch: ${CIRCLE_BRANCH}
+  deploy_europe-albania:
+    branch: europe-albania
     commands:
       - git checkout master
       - sed -i "/$MAP/d" maps.md

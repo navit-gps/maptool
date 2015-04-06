@@ -11,6 +11,7 @@
 * [europe-belarus]#274
 * [europe-belgium]#276
 * [europe-bosnia-herzegovina]#278
+* [europe-british-isles]#280
 * [europe-bulgaria]#282
 * [europe-croatia]#284
 * [europe-cyprus]#286

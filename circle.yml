@@ -7,7 +7,7 @@ dependencies:
     - mkdir -p ~/assets/binmaps/
     - find  ~/assets/
     - sudo apt-get update
-    - wget -c -O  ~/${MAP}-latest.osm.pbf http://download.geofabrik.de/${MAP}-latest.osm.pbf
+    - GEOFAB=$( echo $MAP | sed -e 's@europe-@europe/@' ); wget -c -O  ~/${MAP}-latest.osm.pbf http://download.geofabrik.de/${GEOFAB}-latest.osm.pbf
     - sudo apt-get install cmake 
     - sudo apt-get install g++
     - bash build.sh
@@ -31,3 +31,20 @@ test:
 general:
   artifacts:
     - "~/assets/binmaps/"
+deployment:
+  update_metadatas:
+    branch: /^((?!master).)*$/
+    commands:
+      - git checkout master
+      - git pull
+      - touch maps.md
+      - sed -i "/$MAP/d" maps.md
+      - echo "* [$MAP]#${CIRCLE_BUILD_NUM}" >> maps.md
+      - sort maps.md -o maps.md
+      - cat maps.md
+      - git add maps.md
+      - git config --global user.email "circleci@navit-project.org"
+      - git config --global user.name "CircleCI"
+      - git commit -m "Automated maps list update from ${CIRCLE_BRANCH}" maps.md
+      - git push origin master
+

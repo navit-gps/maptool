@@ -33,7 +33,7 @@ general:
     - "~/assets/binmaps/"
 deployment:
   deploy_europe-serbia:
-    branch: europe-serbia
+    branch: ${CIRCLE_BRANCH}
     commands:
       - git checkout master
       - git pull

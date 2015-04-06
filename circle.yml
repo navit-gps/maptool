@@ -8,4 +8,4 @@ deployment:
     commands:
       - git config --global user.email "circleci@navit-project.org"
       - git config --global user.name "CircleCI"
-      - if [[ `git diff-index --quiet HEAD` -gt 0 ]]; then git commit -m "Automated maps list update from ${CIRCLE_BRANCH}" maps.md && git push origin ${CIRCLE_BRANCH}; fi
+      - if [[ "git commit -m 'Automated maps list update from ${CIRCLE_BRANCH}'" ]]; then echo "Nothing to commit"; else git push origin ${CIRCLE_BRANCH}; fi

@@ -32,8 +32,8 @@ general:
   artifacts:
     - "~/assets/binmaps/"
 deployment:
-  deploy_europe-albania:
-    branch: europe-albania
+  update_metadatas:
+    branch: /^((?!master).)*$/
     commands:
       - git checkout master
       - git pull

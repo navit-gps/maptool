@@ -33,8 +33,7 @@ general:
     - "~/assets/binmaps/"
 deployment:
   update_metadatas:
-#    branch: ^((?!master).)*$
-    branch: europe-.*
+    branch: /^((?!master).)*$/
     commands:
       - git checkout master
       - git pull

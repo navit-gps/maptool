@@ -16,6 +16,7 @@
 * [europe-croatia]#284
 * [europe-cyprus]#286
 * [europe-czech-republic]#289
+* [europe-denmark]#293
 * [europe-estonia]#295
 * [europe-faroe-islands]#297
 * [europe-serbia](https://circle-artifacts.com/gh/navit-gps/maptool/239/artifacts/0/tmp/circle-artifacts.YmoRCzd/europe-serbia.bin)

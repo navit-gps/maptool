@@ -19,7 +19,7 @@
 * [europe-dach](https://circle-artifacts.com/gh/navit-gps/maptool/435/artifacts/0/tmp/circle-artifacts.lks2FeS/europe-dach.bin)
 * [europe-denmark](https://circle-artifacts.com/gh/navit-gps/maptool/436/artifacts/0/tmp/circle-artifacts.oKYSlI8/europe-denmark.bin)
 * [europe-estonia](https://circle-artifacts.com/gh/navit-gps/maptool/437/artifacts/0/tmp/circle-artifacts.GFlt8Qz/europe-estonia.bin)
-* [europe-faroe-islands](https://circle-artifacts.com/gh/navit-gps/maptool/438/artifacts/0/tmp/circle-artifacts.WDAQYsZ/europe-faroe-islands.bin)
+* [europe-faroe-islands]#529
 * [europe-finland](https://circle-artifacts.com/gh/navit-gps/maptool/439/artifacts/0/tmp/circle-artifacts.AulH1sK/europe-finland.bin)
 * [europe-france](https://circle-artifacts.com/gh/navit-gps/maptool/440/artifacts/0/tmp/circle-artifacts.A23IgKN/europe-france.bin)
 * [europe-georgia](https://circle-artifacts.com/gh/navit-gps/maptool/441/artifacts/0/tmp/circle-artifacts.djR6o7h/europe-georgia.bin)

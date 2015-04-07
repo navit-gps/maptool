@@ -35,6 +35,8 @@ deployment:
   update_metadatas:
     branch: /^((?!master).)*$/
     commands:
+      - git config --global user.email "circleci@navit-project.org"
+      - git config --global user.name "CircleCI"
       - git checkout master
       - git pull
       - touch maps.md
@@ -43,8 +45,6 @@ deployment:
       - sort maps.md -o maps.md
       - cat maps.md
       - git add maps.md
-      - git config --global user.email "circleci@navit-project.org"
-      - git config --global user.name "CircleCI"
       - git commit -m "Automated maps list update from ${CIRCLE_BRANCH}" maps.md
       - git push origin master
 

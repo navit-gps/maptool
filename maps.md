@@ -11,7 +11,7 @@
 * [europe-belarus]#518
 * [europe-belgium]#519
 * [europe-bosnia-herzegovina]#520
-* [europe-british-isles](https://circle-artifacts.com/gh/navit-gps/maptool/280/artifacts/0/tmp/circle-artifacts.JPbzb8g/europe-british-isles.bin)
+* [europe-british-isles]#521
 * [europe-bulgaria]#522
 * [europe-croatia]#523
 * [europe-cyprus]#524

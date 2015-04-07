@@ -45,6 +45,7 @@ deployment:
       - sort maps.md -o maps.md
       - cat maps.md
       - git add maps.md
+      - git pull
       - git commit -m "Automated maps list update from ${CIRCLE_BRANCH}" maps.md
       - git push origin master
 

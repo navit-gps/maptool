@@ -21,7 +21,7 @@
 * [europe-estonia]#437
 * [europe-faroe-islands]#438
 * [europe-finland]#439
-* [europe-france](https://circle-artifacts.com/gh/navit-gps/maptool/353/artifacts/0/tmp/circle-artifacts.Guwy9ak/europe-france.bin)
+* [europe-france]#440
 * [europe-georgia]#441
 * [europe-great-britain]#443
 * [europe-serbia](https://circle-artifacts.com/gh/navit-gps/maptool/239/artifacts/0/tmp/circle-artifacts.YmoRCzd/europe-serbia.bin)

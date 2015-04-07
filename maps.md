@@ -5,7 +5,7 @@
 * [central-america](https://circle-artifacts.com/gh/navit-gps/maptool/404/artifacts/0/tmp/circle-artifacts.gkcZZOu/central-america.bin)
 * [europe-albania]#410
 * [europe-alps](https://circle-artifacts.com/gh/navit-gps/maptool/266/artifacts/0/tmp/circle-artifacts.YmGbeEF/europe-alps.bin)
-* [europe-andorra](https://circle-artifacts.com/gh/navit-gps/maptool/268/artifacts/0/tmp/circle-artifacts.nWakKd1/europe-andorra.bin)
+* [europe-andorra]#412
 * [europe-austria](https://circle-artifacts.com/gh/navit-gps/maptool/269/artifacts/0/tmp/circle-artifacts.tkpxOus/europe-austria.bin)
 * [europe-azores](https://circle-artifacts.com/gh/navit-gps/maptool/271/artifacts/0/tmp/circle-artifacts.El1BEJC/europe-azores.bin)
 * [europe-belarus](https://circle-artifacts.com/gh/navit-gps/maptool/274/artifacts/0/tmp/circle-artifacts.ORaYXQO/europe-belarus.bin)

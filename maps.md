@@ -1,7 +1,7 @@
 * [africa](https://circle-artifacts.com/gh/navit-gps/maptool/394/artifacts/0/tmp/circle-artifacts.6DtjUUc/africa.bin)
 * [antarctica](https://circle-artifacts.com/gh/navit-gps/maptool/395/artifacts/0/tmp/circle-artifacts.YwFZ9TR/antarctica.bin)
 * [asia](https://circle-artifacts.com/gh/navit-gps/maptool/254/artifacts/0/tmp/circle-artifacts.0VIIIqz/asia.bin)
-* [australia-oceania](https://circle-artifacts.com/gh/navit-gps/maptool/255/artifacts/0/tmp/circle-artifacts.6l2dvPW/australia-oceania.bin)
+* [australia-oceania]#399
 * [central-america](https://circle-artifacts.com/gh/navit-gps/maptool/256/artifacts/0/tmp/circle-artifacts.RWCBUU4/central-america.bin)
 * [europe-albania](https://circle-artifacts.com/gh/navit-gps/maptool/264/artifacts/0/tmp/circle-artifacts.05wuFcV/europe-albania.bin)
 * [europe-alps](https://circle-artifacts.com/gh/navit-gps/maptool/266/artifacts/0/tmp/circle-artifacts.YmGbeEF/europe-alps.bin)

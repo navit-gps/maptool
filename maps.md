@@ -18,7 +18,7 @@
 * [europe-czech-republic]#434
 * [europe-dach]()
 * [europe-denmark]#436
-* [europe-estonia](https://circle-artifacts.com/gh/navit-gps/maptool/295/artifacts/0/tmp/circle-artifacts.R5hUSYZ/europe-estonia.bin)
+* [europe-estonia]#437
 * [europe-faroe-islands](https://circle-artifacts.com/gh/navit-gps/maptool/297/artifacts/0/tmp/circle-artifacts.q2n8vIw/europe-faroe-islands.bin)
 * [europe-finland](https://circle-artifacts.com/gh/navit-gps/maptool/299/artifacts/0/tmp/circle-artifacts.tZKEmqm/europe-finland.bin)
 * [europe-france](https://circle-artifacts.com/gh/navit-gps/maptool/353/artifacts/0/tmp/circle-artifacts.Guwy9ak/europe-france.bin)

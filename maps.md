@@ -24,5 +24,5 @@
 * [europe-france]#440
 * [europe-georgia]#441
 * [europe-great-britain]#443
-* [europe-serbia](https://circle-artifacts.com/gh/navit-gps/maptool/239/artifacts/0/tmp/circle-artifacts.YmoRCzd/europe-serbia.bin)
+* [europe-serbia]#474
 [europe-turkey](https://circle-artifacts.com/gh/navit-gps/maptool/221/artifacts/0/tmp/circle-artifacts.KxH0UZU/europe-turkey.bin)

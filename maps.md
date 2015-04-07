@@ -23,6 +23,6 @@
 * [europe-finland]#530
 * [europe-france](https://circle-artifacts.com/gh/navit-gps/maptool/440/artifacts/0/tmp/circle-artifacts.A23IgKN/europe-france.bin)
 * [europe-georgia]#532
-* [europe-great-britain](https://circle-artifacts.com/gh/navit-gps/maptool/443/artifacts/0/tmp/circle-artifacts.g7HFiNj/europe-great-britain.bin)
+* [europe-great-britain]#534
 * [europe-serbia](https://circle-artifacts.com/gh/navit-gps/maptool/475/artifacts/0/tmp/circle-artifacts.BzDwarC/europe-serbia.bin)
 * [europe-turkey](https://circle-artifacts.com/gh/navit-gps/maptool/488/artifacts/0/tmp/circle-artifacts.yPp7ARK/europe-turkey.bin)

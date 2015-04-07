@@ -25,4 +25,4 @@
 * [europe-georgia]#441
 * [europe-great-britain]#443
 * [europe-serbia]#475
-* [europe-turkey]#487
+* [europe-turkey]#488

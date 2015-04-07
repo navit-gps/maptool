@@ -10,7 +10,7 @@
 * [europe-azores](https://circle-artifacts.com/gh/navit-gps/maptool/422/artifacts/0/tmp/circle-artifacts.jG7CZpL/europe-azores.bin)
 * [europe-belarus]#427
 * [europe-belgium]#428
-* [europe-bosnia-herzegovina](https://circle-artifacts.com/gh/navit-gps/maptool/278/artifacts/0/tmp/circle-artifacts.MDjHdmt/europe-bosnia-herzegovina.bin)
+* [europe-bosnia-herzegovina]#429
 * [europe-british-isles](https://circle-artifacts.com/gh/navit-gps/maptool/280/artifacts/0/tmp/circle-artifacts.JPbzb8g/europe-british-isles.bin)
 * [europe-bulgaria](https://circle-artifacts.com/gh/navit-gps/maptool/282/artifacts/0/tmp/circle-artifacts.jvX7Qiz/europe-bulgaria.bin)
 * [europe-croatia](https://circle-artifacts.com/gh/navit-gps/maptool/284/artifacts/0/tmp/circle-artifacts.q3ZoWQH/europe-croatia.bin)

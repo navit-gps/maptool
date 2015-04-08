@@ -13,7 +13,7 @@
 * [europe-bosnia-herzegovina](https://circle-artifacts.com/gh/navit-gps/maptool/520/artifacts/0/tmp/circle-artifacts.KggTlGf/europe-bosnia-herzegovina.bin)
 * [europe-british-isles](https://circle-artifacts.com/gh/navit-gps/maptool/604/artifacts/0/tmp/circle-artifacts.d37zIch/europe-british-isles.bin)
 * [europe-bulgaria](https://circle-artifacts.com/gh/navit-gps/maptool/605/artifacts/0/tmp/circle-artifacts.ckNclIr/europe-bulgaria.bin)
-* [europe-croatia](https://circle-artifacts.com/gh/navit-gps/maptool/606/artifacts/0/tmp/circle-artifacts.go1UtpU/europe-croatia.bin)
+* [europe-croatia]#690
 * [europe-cyprus](https://circle-artifacts.com/gh/navit-gps/maptool/524/artifacts/0/tmp/circle-artifacts.p61TP2r/europe-cyprus.bin)
 * [europe-czech-republic](https://circle-artifacts.com/gh/navit-gps/maptool/608/artifacts/0/tmp/circle-artifacts.OdgPHME/europe-czech-republic.bin)
 * [europe-dach](https://circle-artifacts.com/gh/navit-gps/maptool/609/artifacts/0/tmp/circle-artifacts.Sv9PCKw/europe-dach.bin)

@@ -1,5 +1,5 @@
 * [africa]()
-* [antarctica](https://circle-artifacts.com/gh/navit-gps/maptool/666/artifacts/0/tmp/circle-artifacts.HIGI5xd/antarctica.bin)
+* [antarctica]#705
 * [asia]()
 * [australia-oceania](https://circle-artifacts.com/gh/navit-gps/maptool/677/artifacts/0/tmp/circle-artifacts.GWYY4BQ/australia-oceania.bin)
 * [central-america](https://circle-artifacts.com/gh/navit-gps/maptool/667/artifacts/0/tmp/circle-artifacts.Ld196Px/central-america.bin)

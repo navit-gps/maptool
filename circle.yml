@@ -7,7 +7,7 @@ dependencies:
     - mkdir -p ~/assets/binmaps/
     - find  ~/assets/
     - sudo apt-get update
-    - GEOFAB=$( echo $MAP | sed -e 's@europe-@europe/@' ); wget -c -O  ~/${MAP}-latest.osm.pbf http://download.geofabrik.de/${GEOFAB}-latest.osm.pbf
+    - GEOFAB=$( echo $MAP | sed -e 's@europe-@europe/@' ); wget -c -O  ~/${MAP}-latest.osm.pbf http://download.geofabrik.de/north-america/${GEOFAB}-latest.osm.pbf
     - sudo apt-get install cmake 
     - sudo apt-get install g++
     - bash build.sh

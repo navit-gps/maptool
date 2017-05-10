@@ -20,7 +20,7 @@ test:
     - ./navit/bin/navit/maptool/maptool -P  -6 -s2 -e2 -i ~/${MAP}-latest.osm.pbf $CIRCLE_ARTIFACTS/${MAP}.bin
     - ./navit/bin/navit/maptool/maptool -P  -6 -s3 -e3 -i ~/${MAP}-latest.osm.pbf $CIRCLE_ARTIFACTS/${MAP}.bin
     - ./navit/bin/navit/maptool/maptool -P  -6 -s4 -e4 -i ~/${MAP}-latest.osm.pbf $CIRCLE_ARTIFACTS/${MAP}.bin
-    - ./navit/bin/navit/maptool/maptool -P  -6 -s5 -e5 -i ~/${MAP}-latest.osm.pbf $CIRCLE_ARTIFACTS/${MAP}.bin
+#    - ./navit/bin/navit/maptool/maptool -P  -6 -s5 -e5 -i ~/${MAP}-latest.osm.pbf $CIRCLE_ARTIFACTS/${MAP}.bin
     - ./navit/bin/navit/maptool/maptool -P  -6 -s6 -e6 -i ~/${MAP}-latest.osm.pbf $CIRCLE_ARTIFACTS/${MAP}.bin:
        timeout: 7200
     - ./navit/bin/navit/maptool/maptool -P  -6 -s7 -e7 -i ~/${MAP}-latest.osm.pbf $CIRCLE_ARTIFACTS/${MAP}.bin

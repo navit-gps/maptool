@@ -6,9 +6,13 @@ jobs:
       - image: ubuntu
     working_directory: ~/maptool
     environment:
-        MAP: ${CIRCLE_BRANCH}
+        MAP: "north-america" #${CIRCLE_BRANCH}
     steps:
     - checkout
+    - run:
+        command : |
+          apt-get update
+          apt-get install -y build-essentials cmake g++ git
     - run:
         command : |
           git clone https://github.com/navit-gps/navit.git
@@ -18,10 +22,7 @@ jobs:
           make -j32
     - run:
         command : |
-          apt-get update
           GEOFAB=$( echo $MAP | sed -e 's@europe-@europe/@' ); wget -c -O  ~/${MAP}-latest.osm.pbf http://download.geofabrik.de/${GEOFAB}-latest.osm.pbf
-          apt-get install build-essentials cmake g++
-          bash build.sh
     - run:
         command : |
           ./navit/bin/navit/maptool/maptool -P  -6 -s1 -e1 -i ~/${MAP}-latest.osm.pbf ~/${MAP}.bin

@@ -1,0 +1,58 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: ubuntu
+    working_directory: ~/maptool
+    environment:
+        MAP: ${CIRCLE_BRANCH}
+    steps:
+    - checkout
+    - run:
+        command : |
+          git clone https://github.com/navit-gps/navit.git
+          pushd navit
+          mkdir bin && cd bin
+          cmake ../
+          make -j32
+    - run:
+        command : |
+          apt-get update
+          GEOFAB=$( echo $MAP | sed -e 's@europe-@europe/@' ); wget -c -O  ~/${MAP}-latest.osm.pbf http://download.geofabrik.de/${GEOFAB}-latest.osm.pbf
+          apt-get install build-essentials cmake g++
+          bash build.sh
+    - run:
+        command : |
+          ./navit/bin/navit/maptool/maptool -P  -6 -s1 -e1 -i ~/${MAP}-latest.osm.pbf ~/${MAP}.bin
+    - run:
+        command : |
+          ./navit/bin/navit/maptool/maptool -P  -6 -s2 -e2 -i ~/${MAP}-latest.osm.pbf ~/${MAP}.bin
+    - run:
+        command : |
+          ./navit/bin/navit/maptool/maptool -P  -6 -s3 -e3 -i ~/${MAP}-latest.osm.pbf ~/${MAP}.bin
+    - run:
+        command : |
+          ./navit/bin/navit/maptool/maptool -P  -6 -s4 -e4 -i ~/${MAP}-latest.osm.pbf ~/${MAP}.bin
+    - run:
+        command : |
+          ./navit/bin/navit/maptool/maptool -P  -6 -s5 -e5 -i ~/${MAP}-latest.osm.pbf ~/${MAP}.bin
+    - run:
+        command : |
+          ./navit/bin/navit/maptool/maptool -P  -6 -s6 -e6 -i ~/${MAP}-latest.osm.pbf ~/${MAP}.bin
+    - run:
+        command : |
+          ./navit/bin/navit/maptool/maptool -P  -6 -s7 -e7 -i ~/${MAP}-latest.osm.pbf ~/${MAP}.bin
+    - run:
+        command : |
+          ./navit/bin/navit/maptool/maptool -P  -6 -s8 -e8 -i ~/${MAP}-latest.osm.pbf ~/${MAP}.bin
+    - run:
+        command : |
+          ./navit/bin/navit/maptool/maptool -P  -6 -s9 -e9 -i ~/${MAP}-latest.osm.pbf ~/${MAP}.bin
+    - run:
+        command : |
+          ./navit/bin/navit/maptool/maptool -P  -6 -s10 -e10 -i ~/${MAP}-latest.osm.pbf ~/${MAP}.bin
+    - run:
+        command : |
+          ./navit/bin/navit/maptool/maptool -P  -6 -s11 -i ~/${MAP}-latest.osm.pbf ~/${MAP}.bin
+

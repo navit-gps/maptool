@@ -25,7 +25,7 @@ jobs:
           - maps
     - run:
         command : |
-          GEOFAB=$( echo $MAP | sed -e 's@europe-@europe/@' ); wget -nv -c --show-progress -O  ${MAP}-latest.osm.pbf http://download.geofabrik.de/${GEOFAB}-latest.osm.pbf --progress=dot:mega`
+          GEOFAB=$( echo $MAP | sed -e 's@europe-@europe/@' ); wget -nv -c --show-progress -O  ${MAP}-latest.osm.pbf http://download.geofabrik.de/${GEOFAB}-latest.osm.pbf --progress=dot:mega
     - save_cache:
         key: maps
         paths:

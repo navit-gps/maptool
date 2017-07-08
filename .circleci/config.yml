@@ -20,40 +20,48 @@ jobs:
           mkdir bin && cd bin
           cmake ../
           make -j32
+    - restore_cache:
+        keys:
+          - maps
     - run:
         command : |
-          GEOFAB=$( echo $MAP | sed -e 's@europe-@europe/@' ); wget -nv -c --show-progress -O  ~/${MAP}-latest.osm.pbf http://download.geofabrik.de/${GEOFAB}-latest.osm.pbf --progress=dot:mega
+          GEOFAB=$( echo $MAP | sed -e 's@europe-@europe/@' ); wget -nv -c --show-progress -O  ${MAP}-latest.osm.pbf http://download.geofabrik.de/${GEOFAB}-latest.osm.pbf --progress=dot:mega`
+    - save_cache:
+        key: maps
+        paths:
+          - ~/maptool
     - run:
         command : |
-          ./navit/bin/navit/maptool/maptool -P  -6 -s1 -e1 -i ~/${MAP}-latest.osm.pbf ~/${MAP}.bin
+          ./navit/bin/navit/maptool/maptool -P  -6 -s1 -e1 -i ${MAP}-latest.osm.pbf ${MAP}.bin
+        no_output_timeout: 3600h
     - run:
         command : |
-          ./navit/bin/navit/maptool/maptool -P  -6 -s2 -e2 -i ~/${MAP}-latest.osm.pbf ~/${MAP}.bin
+          ./navit/bin/navit/maptool/maptool -P  -6 -s2 -e2 -i ${MAP}-latest.osm.pbf ${MAP}.bin
     - run:
         command : |
-          ./navit/bin/navit/maptool/maptool -P  -6 -s3 -e3 -i ~/${MAP}-latest.osm.pbf ~/${MAP}.bin
+          ./navit/bin/navit/maptool/maptool -P  -6 -s3 -e3 -i ${MAP}-latest.osm.pbf ${MAP}.bin
     - run:
         command : |
-          ./navit/bin/navit/maptool/maptool -P  -6 -s4 -e4 -i ~/${MAP}-latest.osm.pbf ~/${MAP}.bin
+          ./navit/bin/navit/maptool/maptool -P  -6 -s4 -e4 -i ${MAP}-latest.osm.pbf ${MAP}.bin
     - run:
         command : |
-          ./navit/bin/navit/maptool/maptool -P  -6 -s5 -e5 -i ~/${MAP}-latest.osm.pbf ~/${MAP}.bin
+          ./navit/bin/navit/maptool/maptool -P  -6 -s5 -e5 -i ${MAP}-latest.osm.pbf ${MAP}.bin
     - run:
         command : |
-          ./navit/bin/navit/maptool/maptool -P  -6 -s6 -e6 -i ~/${MAP}-latest.osm.pbf ~/${MAP}.bin
+          ./navit/bin/navit/maptool/maptool -P  -6 -s6 -e6 -i ${MAP}-latest.osm.pbf ${MAP}.bin
     - run:
         command : |
-          ./navit/bin/navit/maptool/maptool -P  -6 -s7 -e7 -i ~/${MAP}-latest.osm.pbf ~/${MAP}.bin
+          ./navit/bin/navit/maptool/maptool -P  -6 -s7 -e7 -i ${MAP}-latest.osm.pbf ${MAP}.bin
     - run:
         command : |
-          ./navit/bin/navit/maptool/maptool -P  -6 -s8 -e8 -i ~/${MAP}-latest.osm.pbf ~/${MAP}.bin
+          ./navit/bin/navit/maptool/maptool -P  -6 -s8 -e8 -i ${MAP}-latest.osm.pbf ${MAP}.bin
     - run:
         command : |
-          ./navit/bin/navit/maptool/maptool -P  -6 -s9 -e9 -i ~/${MAP}-latest.osm.pbf ~/${MAP}.bin
+          ./navit/bin/navit/maptool/maptool -P  -6 -s9 -e9 -i ${MAP}-latest.osm.pbf ${MAP}.bin
     - run:
         command : |
-          ./navit/bin/navit/maptool/maptool -P  -6 -s10 -e10 -i ~/${MAP}-latest.osm.pbf ~/${MAP}.bin
+          ./navit/bin/navit/maptool/maptool -P  -6 -s10 -e10 -i ${MAP}-latest.osm.pbf ${MAP}.bin
     - run:
         command : |
-          ./navit/bin/navit/maptool/maptool -P  -6 -s11 -i ~/${MAP}-latest.osm.pbf ~/${MAP}.bin
+          ./navit/bin/navit/maptool/maptool -P  -6 -s11 -i ${MAP}-latest.osm.pbf ${MAP}.bin
 

@@ -5,6 +5,7 @@ jobs:
     docker:
       - image: ubuntu
     working_directory: ~/maptool
+    no_output_timeout: 3600h
     environment:
         MAP: "europe" #${CIRCLE_BRANCH}
     steps:
@@ -34,7 +35,6 @@ jobs:
     - run:
         command : |
           ./navit/bin/navit/maptool/maptool -P  -6 -s1 -e1 -i ${MAP}-latest.osm.pbf ${MAP}.bin
-        no_output_timeout: 3600h
     - run:
         command : |
           ./navit/bin/navit/maptool/maptool -P  -6 -s2 -e2 -i ${MAP}-latest.osm.pbf ${MAP}.bin

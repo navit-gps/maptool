@@ -5,7 +5,6 @@ jobs:
     docker:
       - image: ubuntu
     working_directory: ~/maptool
-    no_output_timeout: 3600h
     environment:
         MAP: "europe" #${CIRCLE_BRANCH}
     steps:
@@ -35,34 +34,45 @@ jobs:
     - run:
         command : |
           ./navit/bin/navit/maptool/maptool -P  -6 -s1 -e1 -i ${MAP}-latest.osm.pbf ${MAP}.bin
+        no_output_timeout: 3600h
     - run:
         command : |
           ./navit/bin/navit/maptool/maptool -P  -6 -s2 -e2 -i ${MAP}-latest.osm.pbf ${MAP}.bin
+        no_output_timeout: 3600h
     - run:
         command : |
           ./navit/bin/navit/maptool/maptool -P  -6 -s3 -e3 -i ${MAP}-latest.osm.pbf ${MAP}.bin
+        no_output_timeout: 3600h
     - run:
         command : |
           ./navit/bin/navit/maptool/maptool -P  -6 -s4 -e4 -i ${MAP}-latest.osm.pbf ${MAP}.bin
+        no_output_timeout: 3600h
     - run:
         command : |
           ./navit/bin/navit/maptool/maptool -P  -6 -s5 -e5 -i ${MAP}-latest.osm.pbf ${MAP}.bin
+        no_output_timeout: 3600h
     - run:
         command : |
           ./navit/bin/navit/maptool/maptool -P  -6 -s6 -e6 -i ${MAP}-latest.osm.pbf ${MAP}.bin
+        no_output_timeout: 3600h
     - run:
         command : |
           ./navit/bin/navit/maptool/maptool -P  -6 -s7 -e7 -i ${MAP}-latest.osm.pbf ${MAP}.bin
+        no_output_timeout: 3600h
     - run:
         command : |
           ./navit/bin/navit/maptool/maptool -P  -6 -s8 -e8 -i ${MAP}-latest.osm.pbf ${MAP}.bin
+        no_output_timeout: 3600h
     - run:
         command : |
           ./navit/bin/navit/maptool/maptool -P  -6 -s9 -e9 -i ${MAP}-latest.osm.pbf ${MAP}.bin
+        no_output_timeout: 3600h
     - run:
         command : |
           ./navit/bin/navit/maptool/maptool -P  -6 -s10 -e10 -i ${MAP}-latest.osm.pbf ${MAP}.bin
+        no_output_timeout: 3600h
     - run:
         command : |
           ./navit/bin/navit/maptool/maptool -P  -6 -s11 -i ${MAP}-latest.osm.pbf ${MAP}.bin
+        no_output_timeout: 3600h
 
